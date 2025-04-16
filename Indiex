@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thirumala Banana Shop</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Thirumala Banana Shop</h1>
+    <p>Fresh Bananas & Banana Leaves at Your Doorstep</p>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Thirumala Banana Shop, your trusted source for fresh and high-quality bananas and banana leaves. Run by Aravinth, our shop offers a wide variety of bananas straight from the farm to your home.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <ul>
+      <li>Robusta Bananas</li>
+      <li>Rasthali Bananas</li>
+      <li>Poovan Bananas</li>
+      <li>Nendran Bananas</li>
+      <li>Fresh Banana Leaves</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: <a href="tel:6383435409">6383435409</a></p>
+    <p>Shop Owner: Aravinth</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Thirumala Banana Shop. All rights reserved.</p>
+  </footer>
+</body>
+</html>
