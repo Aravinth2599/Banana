@@ -15,27 +15,27 @@
   <section class="gallery">
     <h2>Our Products</h2>
     <div class="images">
-      <img src="https://via.placeholder.com/200?text=Rasthali" alt="Rasthali Banana">
-      <img src="https://via.placeholder.com/200?text=Robusta" alt="Robusta Banana">
-      <img src="https://via.placeholder.com/200?text=Banana+Leaves" alt="Banana Leaves">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Robusta_Banana.jpg" alt="Robusta Banana">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Nendran_banana.jpg" alt="Nendran Banana">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Banana_Leaf.jpg" alt="Banana Leaves">
     </div>
   </section>
 
   <section class="booking">
-  <h2>Place an Order</h2>
-  <form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;">
-    <label>Name:</label>
-    <input type="text" id="name" placeholder="Your Name" required />
-    <label>Phone:</label>
-    <input type="tel" id="phone" placeholder="6383435409" required />
-    <label>Product:</label>
-    <input type="text" id="product" placeholder="e.g. Robusta, 2 kg" required />
-    <label>Address:</label>
-    <textarea id="address" placeholder="Your Full Address in Tamil Nadu" required></textarea>
-    <button type="submit">Book Now</button>
-  </form>
-</section>
-  
+    <h2>Place an Order via WhatsApp</h2>
+    <form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;">
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <label>Phone:</label>
+      <input type="tel" id="phone" placeholder="6383435409" required />
+      <label>Product:</label>
+      <input type="text" id="product" placeholder="e.g. Robusta, 2 kg" required />
+      <label>Address:</label>
+      <textarea id="address" placeholder="Your Full Address in Tamil Nadu" required></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
   <section class="delivery">
     <h2>Delivery Info</h2>
     <p>We deliver to all districts in Tamil Nadu within 1–2 days of order confirmation. Cash on delivery or UPI available.</p>
@@ -43,23 +43,35 @@
 
   <section class="payment">
     <h2>Payment Methods</h2>
-    <p>UPI: 6383435409@ybl<br/>PhonePe / GPay also accepted after booking.</p>
+    <p>UPI: thirumala@upi<br/>PhonePe / GPay also accepted after booking.</p>
+  </section>
+
+  <section class="map">
+    <h2>Visit Us</h2>
+    <p>Therku Vasal Santhai, Thisaiyanvilai, Tirunelveli, Tamil Nadu - 627657</p>
+    <iframe
+      src="https://www.google.com/maps?q=8.335141,77.865985&hl=en&z=16&output=embed"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
   </section>
 
   <footer>
     <p>Contact: 6383435409 | Owner: Aravinth</p>
   </footer>
-   
-<script>function sendToWhatsApp() 
-{  
-  var name = document.getElementById("name").value;  
- var phone = document.getElementById("phone").value;  
- var product = document.getElementById("product").value;  
- var address = document.getElementById("address").value;
-  var message = `Order from Thirumala Banana Shop%0A%0AName: ${name}%0APhone: ${phone}%0AProduct: ${product}%0AAddress: ${address}`; 
- var phoneNumber = "916383435409"; // Replace with YOUR WhatsApp number
-  window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
-}
-</script> 
+
+  <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var product = document.getElementById("product").value;
+      var address = document.getElementById("address").value;
+
+      var message = `Order from Thirumala Banana Shop%0A%0AName: ${name}%0APhone: ${phone}%0AProduct: ${product}%0AAddress: ${address}`;
+      var phoneNumber = "916383435409";
+
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+      alert("Thank you, " + name + "! Your order details are ready to send via WhatsApp.");
+    }
+  </script>
 </body>
 </html>
