@@ -22,20 +22,20 @@
   </section>
 
   <section class="booking">
-    <h2>Place an Order</h2>
-    <form>
-      <label>Name:</label>
-      <input type="text" placeholder="Your Name" required />
-      <label>Phone:</label>
-      <input type="tel" placeholder="6383435409" required />
-      <label>Product:</label>
-      <input type="text" placeholder="e.g. Robusta, 2 kg" required />
-      <label>Address:</label>
-      <textarea placeholder="Your Full Address in Tamil Nadu" required></textarea>
-      <button type="submit">Book Now</button>
-    </form>
-  </section>
-
+  <h2>Place an Order</h2>
+  <form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;">
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Your Name" required />
+    <label>Phone:</label>
+    <input type="tel" id="phone" placeholder="6383435409" required />
+    <label>Product:</label>
+    <input type="text" id="product" placeholder="e.g. Robusta, 2 kg" required />
+    <label>Address:</label>
+    <textarea id="address" placeholder="Your Full Address in Tamil Nadu" required></textarea>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+  
   <section class="delivery">
     <h2>Delivery Info</h2>
     <p>We deliver to all districts in Tamil Nadu within 1–2 days of order confirmation. Cash on delivery or UPI available.</p>
@@ -49,5 +49,10 @@
   <footer>
     <p>Contact: 6383435409 | Owner: Aravinth</p>
   </footer>
+   
+<script>function sendToWhatsApp() {  var name = document.getElementById("name").value;  var phone = document.getElementById("phone").value;  var product = document.getElementById("product").value;  var address = document.getElementById("address").value;
+  var message = `Order from Thirumala Banana Shop%0A%0AName: ${name}%0APhone: ${phone}%0AProduct: ${product}%0AAddress: ${address}`;  var phoneNumber = "91xxxxxxxxxx"; // Replace with YOUR WhatsApp number
+  window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");}</script>
+  
 </body>
 </html>
